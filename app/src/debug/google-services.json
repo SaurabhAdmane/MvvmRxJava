@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "662877554621",
+    "firebase_url": "https://jiffy-upi.firebaseio.com",
+    "project_id": "jiffy-upi",
+    "storage_bucket": "jiffy-upi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662877554621:android:175b46f7f10c27850cb4d4",
+        "android_client_info": {
+          "package_name": "com.saurabh.synerzipdemo.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662877554621-rine71hs0i09lr3j82k791blqd6csmrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjVWU4H9Mw4jUNkDBHlrj7qxeDlSPgucY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662877554621-rine71hs0i09lr3j82k791blqd6csmrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662877554621:android:15352667d95852880cb4d4",
+        "android_client_info": {
+          "package_name": "com.saurabh.synerzipdemo.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662877554621-rine71hs0i09lr3j82k791blqd6csmrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjVWU4H9Mw4jUNkDBHlrj7qxeDlSPgucY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662877554621-rine71hs0i09lr3j82k791blqd6csmrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
