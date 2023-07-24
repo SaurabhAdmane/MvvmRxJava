@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.saurabh.synerzipdemo.weather.viewmodels.WeatherViewModel" />
+            type="com.saurabh.demo.weather.viewmodels.WeatherViewModel" />
     </data>
 
     <RelativeLayout
