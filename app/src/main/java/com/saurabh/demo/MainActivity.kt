@@ -59,18 +59,35 @@ class MainActivity : AppCompatActivity(), ContextProvider {
         checkSession(intent)
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
 
-        sortByLastName();
+//        sortByLastName();
+        sortByPair()
+    }
+
+    private fun sortByPair() {
+        val employeeList = getEmployeeList()
+        var listPair = arrayListOf<Pair<Int, String>>()
+
+        employeeList.forEachIndexed { index, employeeData ->
+            val acsiiSum = employeeData.lastName.toLowerCase().first().toInt() //getAsciiSum(employeeData.lastName.toLowerCase())
+            listPair.add(Pair(acsiiSum, employeeData.lastName));
+        }
+
+        quickSort(listPair, 0, listPair.size-1)
+
+        listPair.forEachIndexed { index, pair ->
+            Log.e("Pair: ", "${pair.first} name: ${pair.second}")
+        }
     }
 
     fun getEmployeeList(): ArrayList<EmployeeData> {
         val list = ArrayList<EmployeeData>()
-        val emp1 = EmployeeData("Xtz", "Yz", 9)
+        val emp1 = EmployeeData("Xtz", "geeks", 9)
         list.add(emp1)
-        val emp2 = EmployeeData("Paul", "Bzr", 4)
+        val emp2 = EmployeeData("Paul", "for", 4)
         list.add(emp2)
-        val emp3 = EmployeeData("Saurabh", "Admane", 3)
+        val emp3 = EmployeeData("Saurabh", "app", 3)
         list.add(emp3)
-        val emp4 = EmployeeData("Prerna", "Surbhi", 6)
+        val emp4 = EmployeeData("Prerna", "best", 6)
         list.add(emp4)
         return list
     }
@@ -91,6 +108,49 @@ class MainActivity : AppCompatActivity(), ContextProvider {
             Log.e("Emp : ", "${it.empId}")
         }
 
+    }
+
+    fun quickSort(inputArray: ArrayList<Pair<Int, String>>, l: Int, h: Int) {
+        if (l < h) {
+            val pivot = partitionLogic(inputArray, l, h)
+            quickSort(inputArray, l, pivot - 1)
+            quickSort(inputArray, pivot + 1, h)
+        }
+    }
+
+    // l = low(starting point of array), h= high(ending point of array)
+    fun partitionLogic(inputArray: ArrayList<Pair<Int, String>>, l: Int, h: Int): Int {
+        val pivot = inputArray[l].first
+        var i = l
+        var j = h
+        while (i < j) {
+            while (inputArray[i].first <= pivot && i < inputArray.size - 1) {
+                i++
+            }
+            while (inputArray[j].first > pivot) {
+                j--
+            }
+            if (i < j) {
+                swapPosition(inputArray, i, j)
+            }
+        }
+        swapPosition(inputArray, j, l)
+        return j
+    }
+
+    fun swapPosition(input: ArrayList<Pair<Int, String>>, i1: Int, i2: Int) {
+        val temp = input[i1]
+        input[i1] = input[i2]
+        input[i2] = temp
+    }
+
+    private fun getAsciiSum(name : String):Int{
+        var sum = 0
+        name.forEach { s ->
+            val i : Int = s.toInt()
+            sum += i
+        }
+        return sum
     }
 
     fun finishActivity() {

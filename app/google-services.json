@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662877554621:android:175b46f7f10c27850cb4d4",
         "android_client_info": {
-          "package_name": "upi.nsdl.mobile"
+          "package_name": "com.saurabh.demo"
         }
       },
       "oauth_client": [
@@ -39,7 +39,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662877554621:android:15352667d95852880cb4d4",
         "android_client_info": {
-          "package_name": "com.saurabh.synerzipdemo"
+          "package_name": "com.saurabh.demo"
         }
       },
       "oauth_client": [
